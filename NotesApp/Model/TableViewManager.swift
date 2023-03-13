@@ -103,7 +103,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             removeNote(row: 0, tableView: tableView!)
         }
     }
-    
 }
 
 extension MainViewController {

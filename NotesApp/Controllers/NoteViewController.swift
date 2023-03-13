@@ -93,13 +93,12 @@ extension NoteViewController: UITextViewDelegate, UITextFieldDelegate {
         MainViewController.notes[index].title = textField.text!
         CoreDataManager.shared.save()
     }
-    
 }
 
 extension NoteViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
-        
+        self.navigationController?.popViewController(animated: true)
     }
 }
