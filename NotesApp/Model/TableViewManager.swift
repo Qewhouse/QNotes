@@ -8,7 +8,7 @@
 import UIKit
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
-
+    
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else {
             return false
@@ -18,7 +18,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     private var isSearching: Bool {
         return searchController.isActive && !searchBarIsEmpty
     }
-
+    
     internal func setupTableView() {
         let tableView = UITableView(frame: .zero)
         tableView.register(NoteCell.self, forCellReuseIdentifier: NoteCell.id)
@@ -27,6 +27,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         view.addSubview(tableView)
         tableView.separatorColor = .systemGray3
         self.tableView = tableView
+        tableView.backgroundColor = Theme.appcolor
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tableView.widthAnchor.constraint(equalTo: view.widthAnchor),
@@ -61,7 +62,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let noteVC = NoteViewController()
         if isSearching {

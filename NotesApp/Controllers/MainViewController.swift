@@ -22,6 +22,7 @@ class MainViewController: UIViewController {
         label.text = "No notes yet"
         label.font = .systemFont(ofSize: 20)
         label.textColor = .systemGray
+        label.backgroundColor = Theme.appcolor
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -34,7 +35,8 @@ class MainViewController: UIViewController {
         
         view.addSubview(label)
         setConstraints()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = Theme.appcolor
+        
         
         // setting up search controller
         searchController.searchResultsUpdater = self
@@ -79,7 +81,7 @@ class MainViewController: UIViewController {
     private func setupNavigationController() {
         title = "Notes"
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.backgroundColor = .systemBackground
+        navigationController?.navigationBar.backgroundColor = Theme.appcolor
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.hidesBarsOnSwipe = true
         navigationItem.hidesSearchBarWhenScrolling = false

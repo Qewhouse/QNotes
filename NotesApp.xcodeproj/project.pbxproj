@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37CDFD5429BFC9BF00A8DD6F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CDFD5329BFC9BF00A8DD6F /* Theme.swift */; };
 		C865FA5C27973AE000F0270E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C865FA5B27973AE000F0270E /* CustomTextField.swift */; };
 		C865FA5E27973C4A00F0270E /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C865FA5D27973C4A00F0270E /* CustomTextView.swift */; };
 		C8BED24D2797887A009F32C0 /* TableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BED24C2797887A009F32C0 /* TableViewManager.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37CDFD5329BFC9BF00A8DD6F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C865FA5B27973AE000F0270E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C865FA5D27973C4A00F0270E /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		C8BED24C2797887A009F32C0 /* TableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewManager.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				C8DC76B9278E0E5200E77A52 /* AppDelegate.swift */,
 				C8DC76BB278E0E5200E77A52 /* SceneDelegate.swift */,
 				C8F5D2FE278F18EA006580EB /* Extensions.swift */,
+				37CDFD5329BFC9BF00A8DD6F /* Theme.swift */,
 				C8BED25027978FC2009F32C0 /* Model */,
 				C8BED25127978FE3009F32C0 /* View */,
 				C8BED24F27978FA8009F32C0 /* Controllers */,
@@ -203,6 +206,7 @@
 				C865FA5E27973C4A00F0270E /* CustomTextView.swift in Sources */,
 				C8CFCAEB27998382000E035B /* CoreDataManager.swift in Sources */,
 				C8DC76D2278E0F3200E77A52 /* NoteViewController.swift in Sources */,
+				37CDFD5429BFC9BF00A8DD6F /* Theme.swift in Sources */,
 				C865FA5C27973AE000F0270E /* CustomTextField.swift in Sources */,
 				C8CFCAE527997178000E035B /* MyNotes.xcdatamodeld in Sources */,
 			);

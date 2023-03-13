@@ -19,7 +19,7 @@ class NoteViewController: UIViewController {
         super.viewDidLoad()
         
         index = MainViewController.notes.firstIndex(where: {$0.id == noteId})!
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = Theme.appcolor
         self.navigationItem.largeTitleDisplayMode = .never
         setupNavigationBarItem()
         setupTextView()
@@ -45,13 +45,14 @@ class NoteViewController: UIViewController {
     }
     
     private func setupNavigationBarItem() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissKeyboard))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissView))
     }
     
     private func setupTextView() {
         textView = CustomtextView(frame: .zero)
         view.addSubview(textView)
         textView.delegate = self
+        textView.backgroundColor = Theme.appcolor
         NSLayoutConstraint.activate([
             textView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             textView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: view.frame.size.height * 0.09),
@@ -64,6 +65,7 @@ class NoteViewController: UIViewController {
         textField = CustomTextField(frame: .zero)
         view.addSubview(textField)
         textField.delegate = self
+        textField.backgroundColor = Theme.appcolor
         
         NSLayoutConstraint.activate([
             textField.bottomAnchor.constraint(equalTo: textView.topAnchor, constant: -10),
@@ -97,7 +99,7 @@ extension NoteViewController: UITextViewDelegate, UITextFieldDelegate {
 
 extension NoteViewController {
     
-    @objc func dismissKeyboard() {
+    @objc func dismissView() {
         view.endEditing(true)
         self.navigationController?.popViewController(animated: true)
     }

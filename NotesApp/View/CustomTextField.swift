@@ -12,6 +12,7 @@ class CustomTextField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
+        self.backgroundColor = Theme.appcolor
         let font = UIFont.boldSystemFont(ofSize: 28)
         self.font = font
         self.autocorrectionType = .no

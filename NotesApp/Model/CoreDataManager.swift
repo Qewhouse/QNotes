@@ -41,7 +41,7 @@ class CoreDataManager {
         return note
     }
     
-    // Saving notes to database
+    // Save to db
     func save() {
         if viewContext.hasChanges {
             do {
@@ -57,7 +57,7 @@ class CoreDataManager {
         let sortDescriptor = NSSortDescriptor(keyPath: \Note.date, ascending: false)
         request.sortDescriptors = [sortDescriptor]
         
-        // filtering notes
+        // notes filter
         if let filter = filter {
             let pr1 = NSPredicate(format: "title contains[cd] %@", filter)
             let pr2 = NSPredicate(format: "text contains[cd] %@", filter)

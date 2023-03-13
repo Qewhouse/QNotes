@@ -9,7 +9,7 @@ import UIKit
 extension UILabel {
     func animateIn() {
         UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseOut, animations: {
-        self.alpha = 1.0
+            self.alpha = 1.0
         }, completion: nil)
     }
     

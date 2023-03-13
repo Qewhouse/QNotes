@@ -12,10 +12,10 @@ class NoteCell: UITableViewCell {
     static let id = "NoteCell"
     private var note: Note?
     var dateLabel: UILabel!
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
-        self.backgroundColor = .systemBackground
+        self.backgroundColor = Theme.appcolor
         textLabel?.font = .systemFont(ofSize: 24, weight: .semibold)
         detailTextLabel?.font = .systemFont(ofSize: 20, weight: .regular)
         setupDateLabel()
@@ -38,11 +38,11 @@ class NoteCell: UITableViewCell {
         dateLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 74, height: 50))
         dateLabel.textAlignment = .right
         accessoryView = dateLabel
-
+        
         dateLabel.textColor = .gray
         dateLabel.font = .systemFont(ofSize: 14)
     }
-        
+    
     func configureLabels() {
         self.textLabel?.text = note?.title ?? ""
         self.detailTextLabel?.text = note?.text ?? ""

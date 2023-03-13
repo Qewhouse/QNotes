@@ -27,5 +27,4 @@ class AddButton: UIButton {
         self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -45).isActive = true
         self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -45).isActive = true
     }
-
 }
